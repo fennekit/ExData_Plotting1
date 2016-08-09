@@ -1,7 +1,7 @@
 library(data.table)
 
 #read data from zipfile
-consumption <- read.table(unz("./household_powerconsumption.zip","household_power_consumption.txt"), 
+consumption <- read.table(unz("./household_power_consumption.zip","household_power_consumption.txt"), 
                           header=TRUE, na.strings = "?", sep = ";", 
                           stringsAsFactors = FALSE)
 

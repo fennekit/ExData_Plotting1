@@ -15,5 +15,10 @@ highDate <- strptime("03/02/2007 00:00:00", format = "%d/%m/%Y %H:%M:%S")
 consumptionOfInterest <- subset(consumption, DateTime >= lowDate
                                 & DateTime < highDate)
 
+#Create plot as png
+png(filename = "plot1.png", width = 480, height = 480)
+
 with(consumptionOfInterest, hist(Global_active_power, col="red", main="Global Active Power", 
                                 xlab="Global Active Power (kilowatts)"))
+
+dev.off()
